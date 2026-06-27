@@ -6,38 +6,34 @@
 <meta name="theme-color" content="#160008">
 <title>Sea Eagle Spins</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="src/styles.css?v=5">
-<link rel="stylesheet" href="src/polish.css?v=6">
-<link rel="stylesheet" href="src/header-polish.css?v=8">
-<link rel="stylesheet" href="src/layout-fix.css?v=10">
-<link rel="stylesheet" href="src/themes.css?v=11">
-<link rel="stylesheet" href="src/final-cleanup.css?v=12">
-<link rel="stylesheet" href="src/v13-fixes.css?v=13">
-<link rel="stylesheet" href="src/v14-pokies.css?v=14">
-<link rel="stylesheet" href="src/v17-silent-audio.css?v=17">
+<link rel="stylesheet" href="src/sea-eagle-clean.css?v=22">
 </head>
 <body>
 <div id="app">
-  <section id="game" class="screen game active">
+  <section id="game" class="game active">
     <header class="topbar">
       <div class="level card"><b id="levelNo">1</b><div><span>LEVEL <i id="levelPct">0%</i></span><em><u id="levelFill"></u></em></div></div>
       <button class="logo" data-action="menu"><strong>SEA EAGLE</strong><b>SPINS</b><small>★★★★★</small></button>
-      <div class="wallet"><div class="coins card"><span>COINS</span><b id="coins">75,000</b></div><button class="plus" data-action="topup">+</button></div>
+      <div class="wallet"><div class="coins card"><span>BALANCE</span><b id="coins">75,000</b></div><button class="plus" data-action="topup">+</button></div>
     </header>
-    <div class="jackpots"><div class="jackpot card minor"><span>MINOR</span><b id="minor">15,000</b></div><div class="jackpot card major"><span>MAJOR</span><b id="major">75,000</b></div><div class="jackpot card grand"><span>GRAND</span><b id="grand">250,000</b></div></div>
-    <main class="machine"><div class="reels" id="reels"></div><div class="payline"></div><div class="machineGlow"></div></main>
-    <div class="stats"><div class="stat card"><span>FREE SPINS</span><b id="free">0 / 0</b></div><div class="stat card"><span>TOTAL WIN</span><b id="win">0</b></div><div class="stat card"><span>MULTIPLIER</span><b id="mult">x1</b></div></div>
+    <div class="jackpots"><div class="jackpot"><span>MINOR</span><b id="minor">15,000</b></div><div class="jackpot"><span>MAJOR</span><b id="major">75,000</b></div><div class="jackpot"><span>GRAND</span><b id="grand">250,000</b></div></div>
+    <div id="stage" class="stage">LEVEL 1 · BROOKIE GATES</div>
+    <main id="machine" class="machine"><div id="reels" class="reels"></div><div id="payline" class="payline"></div></main>
+    <div class="stats"><div id="freeStat" class="stat card"><span>FREE SPINS</span><b id="free">0 / 0</b></div><div class="stat card"><span>TOTAL WIN</span><b id="win">0</b></div><div class="stat card"><span>MULTIPLIER</span><b id="mult">x1</b></div></div>
     <div class="controls"><div class="bet card"><span>BET</span><b id="bet">500</b><button data-action="minus">−</button><button data-action="plusBet">+</button></div><button class="spin" data-action="spin"><strong>SPIN</strong><small>HOLD<br>TURBO</small></button><button class="auto" data-action="auto">↻ AUTO</button></div>
     <nav class="bottom"><button data-page="home"><i>⌂</i><span>HOME</span></button><button data-action="payouts"><i>🏆</i><span>PAYS</span></button><button data-page="map"><i>🗺</i><span>MAP</span></button><button data-page="challenges"><i>⚡</i><span>QUESTS</span></button><button data-page="settings"><i>⚙</i><span>MORE</span></button></nav>
   </section>
-  <section id="page" class="screen page">
-    <header class="topbar compact"><button class="back" data-action="play">‹</button><button class="logo small" data-action="play"><strong>SEA EAGLE</strong><b>SPINS</b></button><div class="wallet"><div class="coins card"><span>COINS</span><b id="pageCoins">75,000</b></div><button class="plus" data-action="topup">+</button></div></header>
+  <section id="page" class="page">
+    <header class="topbar"><button class="logo" data-action="play"><strong>SEA EAGLE</strong><b>SPINS</b></button><div></div><div class="wallet"><div class="coins card"><span>BALANCE</span><b id="pageCoins">75,000</b></div><button class="plus" data-action="topup">+</button></div></header>
     <main id="pageContent" class="pageContent"></main>
-    <nav class="bottom"><button data-page="home"><i>⌂</i><span>HOME</span></button><button data-page="games"><i>🎰</i><span>GAMES</span></button><button data-page="shop"><i>🛒</i><span>SHOP</span></button><button data-page="collection"><i>🦅</i><span>CARDS</span></button><button data-page="challenges"><i>⚡</i><span>QUESTS</span></button></nav>
+    <nav class="bottom"><button data-action="play"><i>🎰</i><span>PLAY</span></button><button data-page="home"><i>⌂</i><span>HOME</span></button><button data-page="map"><i>🗺</i><span>MAP</span></button><button data-page="challenges"><i>⚡</i><span>QUESTS</span></button><button data-page="settings"><i>⚙</i><span>MORE</span></button></nav>
   </section>
-  <div id="commentary"></div><div id="rain"></div><div id="winPopup" class="winPopup"><div><strong id="winBig">BIG WIN</strong><span id="winLabel">SEA EAGLE PAYOUT</span></div></div><div id="toast"></div><div id="modal"><div id="modalCard"></div></div>
+  <div id="commentary" class="overlay commentary"></div>
+  <div id="winBox" class="overlay winBox"></div>
+  <div id="resultBox" class="overlay resultBox"></div>
+  <div id="freeBanner" class="overlay freeBanner"></div>
+  <div id="modal" class="modal"><div id="modalCard" class="modalCard"></div></div>
 </div>
-<script src="src/app.js?v=11"></script>
-<script src="src/v17-silent-audio.js?v=17"></script>
+<script src="src/sea-eagle-clean.js?v=22"></script>
 </body>
 </html>
