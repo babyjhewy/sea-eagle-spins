@@ -1,1 +1,46 @@
-<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#24020d"><title>Sea Eagle Spins Elite</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="src/sea-eagle-elite-v31.css?v=32"></head><body><div id="splash" class="splash"><div class="splashcard"><div class="badge">Craig's Edition</div><h1>Sea Eagle Spins</h1><p>Brookie lights, Coco pink harness luck, Shebba coffee boosts, David roasts and Zach plaster-grade payouts.</p><button class="start" data-a="start">Tap to Start</button></div></div><div id="app" class="app hidden"><header class="topbar"><div class="level panel"><div id="lvl" class="levelNo">1</div><div class="levelMeta"><div class="mini">Level Progress</div><div class="bar"><span id="fill"></span></div><div id="pct" class="mini">0%</div></div></div><button class="brand panel" data-a="quote"><small>SEA EAGLE</small><b>SPINS ELITE</b></button><div class="balance panel"><div class="mini">Balance</div><b id="coins">75,000</b><button class="add" data-a="top">+ 25,000</button></div></header><section class="jacks"><div class="jack minor"><span>Minor</span><b id="minor">15,000</b></div><div class="jack major"><span>Major</span><b id="major">75,000</b></div><div class="jack grand"><span>Grand</span><b id="grand">250,000</b></div></section><section class="status panel"><div id="stage">Level 1 · Brookie Gates</div><div id="mission">Mission: Land Coco 5 times</div></section><main class="cabinet panel"><div id="toast" class="toast"></div><div id="freebanner" class="free"></div><div id="reels" class="reels"></div><div id="payglow" class="payglow"></div><div id="overlay" class="win"></div><div id="fires"></div></main><section class="stats"><div class="stat panel"><span>Total Win</span><b id="win">0</b></div><div class="stat panel"><span>Free Spins</span><b id="free">0</b></div><div class="stat panel"><span>Multiplier</span><b id="mult">x1</b></div><div class="stat panel"><span>Best Win</span><b id="best">0</b></div></section><section class="controls"><div class="bet panel"><span>Bet</span><b id="bet">500</b><div><button class="small" data-a="down">−</button><button class="small" data-a="up">+</button></div></div><button id="spin" class="spin" data-a="spin">SPIN</button><button id="auto" class="auto" data-a="auto">AUTO</button></section><nav class="nav"><button class="on" data-v="game">Play</button><button data-v="missions">Missions</button><button data-v="map">Map</button><button data-v="quests">Quests</button><button data-v="stats">Stats</button></nav><section id="drawer" class="drawer hidden"><div class="dh"><h2 id="dt">Drawer</h2><button class="small" data-a="close">×</button></div><div id="dc" class="dc"></div></section><div id="comment" class="comment"></div><div id="modal" class="modal hidden"><div class="modalcard"><div class="badge">Challenge</div><h3 id="qt"></h3><p id="qq"></p><div>Reward: <b id="qr"></b> coins</div><div id="answers" class="answers"></div></div></div></div><script src="src/sea-eagle-elite-v32.js?v=32"></script></body></html>
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#160008">
+<title>Sea Eagle Spins</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="src/sea-eagle-clean.css?v=30">
+<style>
+#app:has(#modal.show) .game button,#app:has(#modal.show) .page button{pointer-events:none!important}#app:has(#modal.show) #modal{pointer-events:none!important}#app:has(#modal.show) #modalCard,#app:has(#modal.show) #modalCard button{pointer-events:auto!important}
+</style>
+</head>
+<body>
+<div id="app">
+  <section id="game" class="game active">
+    <header class="topbar">
+      <div class="level card"><b id="levelNo">1</b><div><span>LEVEL <i id="levelPct">0%</i></span><em><u id="levelFill"></u></em></div></div>
+      <button class="logo" data-action="menu"><strong>SEA EAGLE</strong><b>SPINS</b><small>★★★★★</small></button>
+      <div class="wallet"><div class="coins card"><span>BALANCE</span><b id="coins">75,000</b></div><button class="plus" data-action="topup">+</button></div>
+    </header>
+    <div class="jackpots"><div class="jackpot"><span>MINOR</span><b id="minor">15,000</b></div><div class="jackpot"><span>MAJOR</span><b id="major">75,000</b></div><div class="jackpot"><span>GRAND</span><b id="grand">250,000</b></div></div>
+    <div id="stage" class="stage">LEVEL 1 · BROOKIE GATES</div>
+    <main id="machine" class="machine"><div id="reels" class="reels"></div><div id="payline" class="payline"></div></main>
+    <div class="stats"><div id="freeStat" class="stat card"><span>FREE SPINS</span><b id="free">0 / 0</b></div><div class="stat card"><span>TOTAL WIN</span><b id="win">0</b></div><div class="stat card"><span>MULTIPLIER</span><b id="mult">x1</b></div></div>
+    <div class="controls"><div class="bet card"><span>BET</span><b id="bet">500</b><button data-action="minus">−</button><button data-action="plusBet">+</button></div><button class="spin" data-action="spin"><strong>SPIN</strong><small>HOLD<br>TURBO</small></button><button class="auto" data-action="auto">↻ AUTO</button></div>
+    <nav class="bottom"><button data-page="home"><i>⌂</i><span>HOME</span></button><button data-action="payouts"><i>🏆</i><span>PAYS</span></button><button data-page="map"><i>🗺</i><span>MAP</span></button><button data-page="challenges"><i>⚡</i><span>QUESTS</span></button><button data-page="settings"><i>⚙</i><span>MORE</span></button></nav>
+  </section>
+  <section id="page" class="page">
+    <header class="topbar"><button class="logo" data-action="play"><strong>SEA EAGLE</strong><b>SPINS</b></button><div></div><div class="wallet"><div class="coins card"><span>BALANCE</span><b id="pageCoins">75,000</b></div><button class="plus" data-action="topup">+</button></div></header>
+    <main id="pageContent" class="pageContent"></main>
+    <nav class="bottom"><button data-action="play"><i>🎰</i><span>PLAY</span></button><button data-page="home"><i>⌂</i><span>HOME</span></button><button data-page="map"><i>🗺</i><span>MAP</span></button><button data-page="challenges"><i>⚡</i><span>QUESTS</span></button><button data-page="settings"><i>⚙</i><span>MORE</span></button></nav>
+  </section>
+  <div id="commentary" class="overlay commentary"></div>
+  <div id="winBox" class="overlay winBox"></div>
+  <div id="resultBox" class="overlay resultBox"></div>
+  <div id="freeBanner" class="overlay freeBanner"></div>
+  <div id="modal" class="modal"><div id="modalCard" class="modalCard"></div></div>
+</div>
+<script>
+document.addEventListener('click',function(e){var m=document.getElementById('modal'),c=document.getElementById('modalCard');if(m&&c&&m.classList.contains('show')&&c.querySelector('[data-answer]')&&!e.target.closest('[data-answer]')){e.preventDefault();e.stopImmediatePropagation();}},true);
+</script>
+<script src="src/sea-eagle-clean.js?v=30"></script>
+<script src="src/sea-eagle-copy-clean.js?v=30"></script>
+</body>
+</html>
