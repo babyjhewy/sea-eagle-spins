@@ -1,0 +1,2 @@
+/* v17 silent Home Screen audio fix: hide all audio wording/buttons */
+.soundUnlock,.soundMaster,.audioBadge,.pwaSoundGate{display:none!important;visibility:hidden!important;pointer-events:none!important}.dadMotivation .soundText{display:none!important}
