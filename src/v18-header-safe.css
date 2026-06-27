@@ -1,0 +1,12 @@
+/* v18 header-safe popdowns */
+/* Keep the wallet/balance and header permanently above all funny popdowns */
+.topbar{position:relative!important;z-index:220!important}.wallet,.wallet .coins,.wallet .plus{position:relative!important;z-index:230!important}.logo,.level.card{position:relative!important;z-index:225!important}
+/* Funny Jake/Zach/Coco banner now lives BELOW the header, not over balance */
+#commentary{top:10.95%!important;left:7%!important;right:7%!important;z-index:118!important;pointer-events:none!important;transform:translateY(-.25vh) scale(.98)!important}#commentary.show{transform:translateY(0) scale(1)!important}.talk{grid-template-columns:3.25vh 1fr!important;min-height:3.8vh!important;padding:.3vh .56vh!important;border-radius:.95vh!important;background:linear-gradient(180deg,rgba(112,0,42,.96),rgba(20,0,8,.96))!important;border:.14vh solid rgba(255,230,140,.86)!important;box-shadow:0 .34vh 1vh rgba(0,0,0,.5),0 0 .9vh rgba(255,212,95,.22)!important}.talk .face{width:3.25vh!important;height:3.25vh!important;font-size:1.78vh!important}.talk b{font-size:min(1.18vh,9.2px)!important;line-height:1!important;text-align:center!important}.talk span{font-size:min(1vh,7.8px)!important;line-height:1.06!important;text-align:center!important}
+/* Daily dad motivation goes below header/commentary zone, not over wallet */
+.dadMotivation{top:15.25%!important;left:6%!important;right:6%!important;z-index:117!important;min-height:4.35vh!important;padding:.46vh .72vh!important;border-radius:1vh!important}.dadMotivation b{font-size:min(1.48vh,11.3px)!important}.dadMotivation span{font-size:min(1.02vh,8px)!important;line-height:1.08!important}
+/* Preserve the stage ribbon and jackpots beneath the notification area */
+.stageRibbon{z-index:18!important}.jackpots{z-index:16!important}.machine{z-index:4!important}
+/* Result trays stay in gameplay area only */
+.resultTray{top:63.5%!important;z-index:72!important}.winPopup{top:39.7%!important}.soundUnlock,.soundMaster,.audioBadge,.pwaSoundGate{display:none!important;visibility:hidden!important;pointer-events:none!important}
+@media(max-height:680px){#commentary{top:10.65%!important}.dadMotivation{top:14.8%!important;min-height:4.05vh!important}.talk{min-height:3.55vh!important}.talk span{font-size:min(.92vh,7.2px)!important}.dadMotivation b{font-size:min(1.32vh,10px)!important}.dadMotivation span{font-size:min(.92vh,7.2px)!important}}
