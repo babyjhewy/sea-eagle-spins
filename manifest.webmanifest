@@ -1,0 +1,10 @@
+{
+  "name": "Sea Eagle Spins",
+  "short_name": "Sea Eagle Spins",
+  "display": "standalone",
+  "start_url": "./",
+  "background_color": "#090004",
+  "theme_color": "#220010",
+  "orientation": "portrait",
+  "icons": []
+}
