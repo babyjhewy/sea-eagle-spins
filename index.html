@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#160008">
 <title>Sea Eagle Spins</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="src/styles.css?v=3">
+<link rel="stylesheet" href="src/styles.css?v=5">
 </head>
 <body>
 <div id="app">
@@ -20,15 +20,15 @@
     <main class="machine"><div class="reels" id="reels"></div><div class="payline"></div></main>
     <div class="stats"><div class="stat card"><span>FREE SPINS</span><b id="free">8 / 10</b></div><div class="stat card"><span>TOTAL WIN</span><b id="win">5,750</b></div><div class="stat card"><span>MULTIPLIER</span><b id="mult">x3</b></div></div>
     <div class="controls"><div class="bet card"><span>BET</span><b id="bet">2,500</b><button data-action="minus">−</button><button data-action="plusBet">+</button></div><button class="spin" data-action="spin"><strong>SPIN</strong><small>HOLD<br>TURBO</small></button><button class="auto" data-action="auto">↻ AUTO</button></div>
-    <nav class="bottom"><button data-page="home"><i>⌂</i><span>HOME</span></button><button data-action="payouts"><i>🏆</i><span>PAYS</span></button><button data-page="map"><i>🗺</i><span>MAP</span></button><button data-page="room"><i>🛋</i><span>ROOM</span></button><button data-page="settings"><i>⚙</i><span>MORE</span></button></nav>
+    <nav class="bottom"><button data-page="home"><i>⌂</i><span>HOME</span></button><button data-action="payouts"><i>🏆</i><span>PAYS</span></button><button data-page="map"><i>🗺</i><span>MAP</span></button><button data-page="challenges"><i>⚡</i><span>QUESTS</span></button><button data-page="settings"><i>⚙</i><span>MORE</span></button></nav>
   </section>
   <section id="page" class="screen page">
     <header class="topbar compact"><button class="back" data-action="play">‹</button><button class="logo small" data-action="play"><strong>SEA EAGLE</strong><b>SPINS</b></button><div class="wallet"><div class="coins card"><span>COINS</span><b id="pageCoins">256,780</b></div><button class="plus" data-action="topup">+</button></div></header>
     <main id="pageContent" class="pageContent"></main>
-    <nav class="bottom"><button data-page="home"><i>⌂</i><span>HOME</span></button><button data-page="games"><i>🎰</i><span>GAMES</span></button><button data-page="shop"><i>🛒</i><span>SHOP</span></button><button data-page="collection"><i>🦅</i><span>CARDS</span></button><button data-page="room"><i>🛋</i><span>ROOM</span></button></nav>
+    <nav class="bottom"><button data-page="home"><i>⌂</i><span>HOME</span></button><button data-page="games"><i>🎰</i><span>GAMES</span></button><button data-page="shop"><i>🛒</i><span>SHOP</span></button><button data-page="collection"><i>🦅</i><span>CARDS</span></button><button data-page="challenges"><i>⚡</i><span>QUESTS</span></button></nav>
   </section>
-  <div id="rain"></div><div id="winPopup" class="winPopup"><div><strong id="winBig">BIG WIN</strong><span id="winLabel">SEA EAGLE PAYOUT</span></div></div><div id="toast"></div><div id="modal"><div id="modalCard"></div></div>
+  <div id="commentary"></div><div id="rain"></div><div id="winPopup" class="winPopup"><div><strong id="winBig">BIG WIN</strong><span id="winLabel">SEA EAGLE PAYOUT</span></div></div><div id="toast"></div><div id="modal"><div id="modalCard"></div></div>
 </div>
-<script src="src/app.js?v=3"></script>
+<script src="src/app.js?v=5"></script>
 </body>
 </html>
